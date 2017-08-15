@@ -1,0 +1,5 @@
+coreutils
+findutils
+git
+rpmdevtools
+yum-utils
