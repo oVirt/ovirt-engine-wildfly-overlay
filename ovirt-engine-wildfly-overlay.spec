@@ -1,5 +1,5 @@
 Name:		ovirt-engine-wildfly-overlay
-Version:	11.0.0
+Version:	11.0.1
 Release:	1%{?dist}
 Summary:	WildFly 11 overlay for ovirt-engine
 Group:		Virtualization/Management
@@ -8,8 +8,11 @@ URL:		http://www.ovirt.org
 BuildArch:	noarch
 Source0:	README
 
+Requires:	ovirt-engine-wildfly >= 11.0.0
+Conflicts:	ovirt-engine-wildfly >= 12.0.0
+
 %description
-WildFly 10 overlay for ovirt-engine
+WildFly 11 overlay for ovirt-engine
 
 %install
 install -d -m 0755 "%{buildroot}%{_docdir}/%{name}"
@@ -21,5 +24,8 @@ install -d -m 0755 "%{buildroot}%{_datadir}/%{name}/modules"
 %{_docdir}/%{name}/
 
 %changelog
+* Mon Aug 28 2017 Martin Perina <mperina@redhat.com> 11.0.1-1
+- Added dependency on relevant ovirt-engine-wildfly package
+
 * Tue Aug 15 2017 Martin Perina <mperina@redhat.com> 11.0.0-1
 - Initial release for WildFly 11
