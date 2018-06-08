@@ -21,7 +21,6 @@ yum-builddep *src.rpm
 rpmbuild \
     -D "_rpmdir $PWD/output" \
     -D "_topmdir $PWD/rpmbuild" \
-    -D "release_suffix ${SUFFIX}" \
     --rebuild *.src.rpm
 
 # Store any relevant artifacts in exported-artifacts for the ci system to
