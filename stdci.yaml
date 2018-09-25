@@ -1,4 +1,4 @@
 distros:
   - el7
 release_branches:
-  master: ovirt-3.6
+  wildfly-8: ovirt-3.6
