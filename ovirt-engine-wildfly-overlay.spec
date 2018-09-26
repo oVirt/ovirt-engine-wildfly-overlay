@@ -1,16 +1,16 @@
 Name:		ovirt-engine-wildfly-overlay
-Version:	13.0.0
-Release:	2%{?dist}
-Summary:	WildFly 11 overlay for ovirt-engine
+Version:	14.0.0
+Release:	1%{?dist}
+Summary:	WildFly 14 overlay for ovirt-engine
 Group:		Virtualization/Management
 License:	ASL-2.0
 URL:		http://www.ovirt.org
 BuildArch:	noarch
 Source0:	README
 
-Provides:	ovirt-engine-wildfly-overlay-13
+Provides:	ovirt-engine-wildfly-overlay-14
 
-Requires:	ovirt-engine-wildfly-13
+Requires:	ovirt-engine-wildfly-14
 
 %description
 WildFly 13 overlay for ovirt-engine
@@ -25,6 +25,9 @@ install -d -m 0755 "%{buildroot}%{_datadir}/%{name}/modules"
 %{_docdir}/%{name}/
 
 %changelog
+* Wed Sep 26 2018 Martin Perina <mperina@redhat.com> 14.0.0-1
+- Initial release for WildFly 14
+
 * Fri Sep 21 2018 Martin Perina <mperina@redhat.com> 13.0.0-2
 - Add 'Provides ovirt-engine-wildfly-overlay-13' and
   'Requires: ovirt-engine-wildfly-13' to simplify upgrade of WildFly in CI
